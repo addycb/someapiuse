@@ -9,6 +9,9 @@
 """
 
 import requests
+import sqlalchemy as db
+import pandas as pd
+
 lgname=input("Enter username: ")
 lgpassword=input("Enter password: ")
 S = requests.Session()
@@ -46,3 +49,5 @@ DATA = R.json()
 
 print(DATA)
 
+data = {'col_1': [3, 2, 1, 0], 'col_2': ['a', 'b', 'c', 'd']}
+pd.DataFrame.from_dict(data)
